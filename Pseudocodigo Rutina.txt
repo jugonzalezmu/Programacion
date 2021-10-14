@@ -1,0 +1,44 @@
+Algoritmo RutinaAntesClase
+	Definir hora Como Entero
+	Definir comprobar Como Entero
+	comprobar <- 1
+	hora <- 0
+	Mientras comprobar==1 Hacer
+		Escribir ingresar,hora
+		Leer hora
+		Si hora>=600 Y 630<=hora Entonces
+			Escribir levantarse
+			Escribir arreglar,cuarto
+			Escribir cocinar,desayuno
+			Escribir bañarse
+			Escribir verificar,clases,del,dia
+			Definir clase Como Logico
+			Leer clase
+			Mientras clase==Verdadero Hacer
+				Segun hora  Hacer
+					700:
+						Escribir 700,clase,calculo
+						Escribir asistir,a,clase,calculo
+					900:
+						Escribir 900,clase,programacion
+						Escribir asistir,a,clase,programacion
+					De Otro Modo:
+						Si hora>700 Y 1100<hora Entonces
+							Escribir atender,a,clase
+							comprobar <- 1
+						SiNo
+							Escribir hora,libre O DE,trabajos
+							clase <- Falso
+						FinSi
+				FinSegun
+			FinMientras
+		FinSi
+		Si hora<600 Entonces
+			Escribir Seguir,durmiendo
+			comprobar <- 1
+		FinSi
+		Si hora>1100 Entonces
+			comprobar <- 0
+		FinSi
+	FinMientras
+FinAlgoritmo
